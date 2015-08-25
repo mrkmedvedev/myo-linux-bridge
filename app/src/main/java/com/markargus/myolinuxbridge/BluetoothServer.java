@@ -222,7 +222,7 @@ public class BluetoothServer {
 
             // Attempt to create server socket using RFCOMM service
             try {
-                serverSocket = mBluetoothAdapter.listenUsingRfcommWithServiceRecord(
+                serverSocket = mBluetoothAdapter.listenUsingInsecureRfcommWithServiceRecord(
                         SERVICE_NAME, UUID.fromString(SERVICE_UUID));
             } catch (IOException e) {
                 reportError("Error creating bluetooth server socket: " + e);

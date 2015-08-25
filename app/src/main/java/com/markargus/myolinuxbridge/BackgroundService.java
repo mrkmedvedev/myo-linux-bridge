@@ -6,6 +6,7 @@
 package com.markargus.myolinuxbridge;
 
 import android.app.Service;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
@@ -161,7 +162,11 @@ public class BackgroundService extends Service implements BluetoothServer.IBluet
 
     @Override
     public void onStopped() {
-        showToast("Bluetooth client stopped.");
-
+//        showToast("Bluetooth client stopped.");
+        try {
+            bluetoothServer.start();
+        } catch (BluetoothServer.BluetoothServerException e) {
+            e.printStackTrace();
+        }
     }
 }
