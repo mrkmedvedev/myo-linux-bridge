@@ -26,7 +26,7 @@ public class BackgroundService extends Service implements BluetoothServer.IBluet
 
     private Toast mToast;
 
-    // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
+    // Classes that inherit from AbstracwtDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
     private DeviceListener mListener = new AbstractDeviceListener() {
         @Override
